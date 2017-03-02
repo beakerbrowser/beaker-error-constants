@@ -109,14 +109,14 @@ exports.QuotaExceededError = class QuotaExceededError extends ExtendableError {
 
 exports.InvalidURLError = class InvalidURLError extends ExtendableError {
   constructor(msg) {
-    super(msg || 'User denied permission')
+    super(msg || 'Invalid URL')
     this.permissionDenied = true
   }
 }
 
 exports.InvalidArchiveKeyError = class InvalidArchiveKeyError extends ExtendableError {
   constructor(msg) {
-    super(msg || 'User denied permission')
+    super(msg || 'Invalid archive key')
     this.permissionDenied = true
   }
 }
