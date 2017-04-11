@@ -28,7 +28,7 @@ exports.NotAFileError = class NotAFileError extends ExtendableError {
 exports.NotAFolderError = class NotAFolderError extends ExtendableError {
   constructor(msg) {
     super(msg || 'Target must be a folder')
-    this.notAFile = true
+    this.notAFolder = true
   }
 }
 
