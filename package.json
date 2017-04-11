@@ -1,6 +1,6 @@
 {
   "name": "beaker-error-constants",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Module containing the errors used by beaker and its submodules",
   "main": "index.js",
   "scripts": {
