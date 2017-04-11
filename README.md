@@ -5,6 +5,7 @@ Module containing all of the errors used by Beaker, or its submodules.
 ```
 NotFoundError
 NotAFileError
+NotAFolderError
 InvalidEncodingError
 TimeoutError
 ArchiveNotWritableError
