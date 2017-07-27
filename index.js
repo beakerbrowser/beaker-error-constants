@@ -5,8 +5,8 @@ class ExtendableError extends Error {
     this.message = msg
     if (typeof Error.captureStackTrace === 'function') {
       Error.captureStackTrace(this, this.constructor)
-    } else { 
-      this.stack = (new Error(msg)).stack 
+    } else {
+      this.stack = (new Error(msg)).stack
     }
   }
 }
@@ -85,7 +85,7 @@ exports.DestDirectoryNotEmpty = class DestDirectoryNotEmpty extends ExtendableEr
   constructor(msg) {
     super(msg || 'Destination path is not empty ; Aborting')
     this.destDirectoryNotEmpty = true
-  }  
+  }
 }
 
 exports.ProtocolSetupError = class ProtocolSetupError extends ExtendableError {
@@ -132,5 +132,12 @@ exports.ProtectedFileNotWritableError = class ProtectedFileNotWritableError exte
   constructor(msg) {
     super(msg || 'Protected file is not wrtable')
     this.protectedFileNotWritable = true
+  }
+}
+
+exports.ModalActiveError = class ModalActiveError extends ExtendableError {
+  constructor(msg) {
+    super(msg || 'Modal already active')
+    this.modalActive = true
   }
 }
