@@ -21,4 +21,5 @@ QuotaExceededError
 InvalidURLError
 InvalidArchiveKeyError
 ProtectedFileNotWritableError
+ModalActiveError
 ```
