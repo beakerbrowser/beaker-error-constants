@@ -109,8 +109,15 @@ exports.PermissionsError = class PermissionsError extends ExtendableError {
 }
 exports.QuotaExceededError = class QuotaExceededError extends ExtendableError {
   constructor(msg) {
-    super(msg || 'Disk space quota exciteed')
+    super(msg || 'Disk space quota exceeded')
     this.quotaExceeded = true
+  }
+}
+
+exports.SourceTooLargeError = class SourceTooLargeError extends ExtendableError {
+  constructor(msg) {
+    super(msg || 'The source file is too large')
+    this.sourceTooLarge = true
   }
 }
 

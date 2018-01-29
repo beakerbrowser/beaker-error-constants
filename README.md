@@ -18,6 +18,7 @@ ProtocolSetupError
 UserDeniedError
 PermissionsError
 QuotaExceededError
+SourceTooLargeError
 InvalidURLError
 InvalidArchiveKeyError
 ProtectedFileNotWritableError
