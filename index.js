@@ -135,6 +135,13 @@ exports.InvalidArchiveKeyError = class InvalidArchiveKeyError extends Extendable
   }
 }
 
+exports.InvalidDomainName = class InvalidDomainName extends ExtendableError {
+  constructor(msg) {
+    super(msg || 'Invalid domain name')
+    this.invalidDomainName = true
+  }
+}
+
 exports.ProtectedFileNotWritableError = class ProtectedFileNotWritableError extends ExtendableError {
   constructor(msg) {
     super(msg || 'Protected file is not wrtable')
