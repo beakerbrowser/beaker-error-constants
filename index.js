@@ -32,6 +32,13 @@ exports.NotAFolderError = class NotAFolderError extends ExtendableError {
   }
 }
 
+exports.NotAvailableError = class NotAvailableError extends ExtendableError {
+  constructor(msg) {
+    super(msg || 'The file or folder is not currently being hosted by any connectable peers')
+    this.notAFolder = true
+  }
+}
+
 exports.InvalidEncodingError = class InvalidEncodingError extends ExtendableError {
   constructor(msg) {
     super(msg || 'Invalid encoding')
